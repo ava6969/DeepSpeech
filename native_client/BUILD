@@ -75,6 +75,7 @@ cc_library(
         "ctcdecode/scorer.cpp",
         "ctcdecode/path_trie.cpp",
         "ctcdecode/path_trie.h",
+        "alphabet.cc",
     ] + OPENFST_SOURCES_PLATFORM,
     hdrs = [
         "ctcdecode/ctc_beam_search_decoder.h",
@@ -92,7 +93,6 @@ cc_library(
 tf_cc_shared_object(
     name = "libdeepspeech.so",
     srcs = [
-        "alphabet.h",
         "deepspeech.cc",
         "deepspeech.h",
         "deepspeech_errors.cc",
